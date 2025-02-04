@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1738633794314,
+      "tag": "0000_overrated_young_avengers",
+      "breakpoints": true
+    }
+  ]
+}

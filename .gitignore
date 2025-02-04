@@ -173,3 +173,13 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Drizzle ORM
+drizzle-migrations/
+drizzle/*
+
+# Database files (e.g., SQLite)
+*.db
+*.sqlite
+db/*.db
+db/*.sqlite

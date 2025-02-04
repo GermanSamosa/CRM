@@ -1,15 +1,19 @@
-import { getAllUsers, createUser } from "../models/userModel";
+import { getAllUsers, getUserById, createUser, updateUser, deleteUser } from "../models/userModel";
 
-export const getUsers = async () => {
-  const users = await getAllUsers();
-  return users;
+export const getUser = async (id: number) => {
+  return await getUserById(id);
 };
 
-export const addUser = async (userData: { name: string; email: string; phone?: string; }) => {
-  try {
-    const result = await createUser(userData);
-    return { message: "User created successfully", data: result };
-  } catch (error: any) {
-    return { message: "Error creating user", error: error.message };
-  }
+export const getUsers = async () => await getAllUsers();
+
+export const addUser = async (userData: { name: string; email: string; phone?: string }) => {
+  return await createUser(userData);
+};
+
+export const editUser = async (id: number, userData: Partial<{ name: string; email: string; phone?: string }>) => {
+  return await updateUser(id, userData);
+};
+
+export const removeUser = async (id: number) => {
+  return await deleteUser(id);
 };
