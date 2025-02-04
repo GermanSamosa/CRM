@@ -176,10 +176,11 @@ dist
 
 # Drizzle ORM
 drizzle-migrations/
-drizzle/*
+drizzle/meta/
 
 # Database files (e.g., SQLite)
 *.db
 *.sqlite
 db/*.db
 db/*.sqlite
+*.sql 
